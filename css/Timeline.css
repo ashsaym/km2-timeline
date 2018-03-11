@@ -156,7 +156,7 @@ body {}
 .timeline > li > .timeline-badge.active {
     color: #0E3B85;
     animation-name: lines;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-delay: 0s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
@@ -165,7 +165,7 @@ body {}
 .timeline > li > .timeline-panel.active:after {
     animation-name: lines2;
     animation-duration: 1s;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 
@@ -173,16 +173,16 @@ body {}
 
 .timeline > li > .timeline-panel.active:before {
     animation-name: lines3;
-    animation-duration: 2s;
-    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
 
 .timeline > li > .timeline-panel-img.active:before {
     animation-name: ani-img;
-    animation-duration: 2s;
-    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
