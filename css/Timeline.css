@@ -190,13 +190,18 @@ body {}
 }
 
 /************************************************************************************/
+.timeline-panel-text{
+opacity: 0;
+
+}
 
 .timeline-panel-text.active {
   animation-name: ani-panel;
-  animation-duration: 1s;
-  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
+
 }
 
 /************************************************************************************/
@@ -317,15 +322,18 @@ body {}
   0% {
     color: #7390BF;
     ;
-    transform: scale(1, 1);
+
+    opacity: 0;
   }
   50% {
     color: #7390BF;
-    transform: scale(1.2, 1.2);
+
+    opacity: 0.5;
   }
   100% {
     color: #7390BF;
-    transform: scale(1, 1);
+
+    opacity: 1;
   }
 }
 
