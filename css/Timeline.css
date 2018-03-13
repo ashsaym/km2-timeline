@@ -131,6 +131,11 @@ body {}
     content: " ";
 }
 /************************************************************************************/
+.timeline-panel-img img{
+  width: 200px;
+  height: 200px;
+}
+/************************************************************************************/
 .timeline > li > .timeline-panel-img:before {
     position: absolute;
     top: 50px;
@@ -200,16 +205,16 @@ body {}
 /************************************************************************************/
 .timeline-heading.active{
     animation-name: heading;
-    animation-duration: 1s;
-    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
 /************************************************************************************/
 .timeline-title.active{
     animation-name: heading;
-    animation-duration: 1s;
-    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
@@ -272,9 +277,19 @@ body {}
         transform: scale(1,1);
 
     }
+    25% {
+        color: #7390BF;
+        transform: scale(0.97,0.97);
+
+    }
     50% {
         color: #7390BF;
         transform: scale(1.1,1.1);
+
+    }
+    75% {
+        color: #7390BF;
+        transform: scale(0.97,0.97);
 
     }
     100% {
@@ -287,17 +302,12 @@ body {}
 @keyframes ani-body {
     0% {
         color: lightblue;
-
-
     }
     50% {
         color: #7390BF;
-
     }
     100% {
         color: #0E3B85;
-        
-
     }
 }
 /************************************************************************************/
