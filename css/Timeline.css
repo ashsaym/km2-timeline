@@ -5,7 +5,7 @@
 }
 
 body {}
-
+/************************************************************************************/
 .UpperPart {
     height: 100%;
     width: 100%;
@@ -60,7 +60,7 @@ body {}
     border-right: 1.2px solid #0E3B85;
     z-index: 3;
 }
-
+/************************************************************************************/
 .timeline {
     list-style: none;
     padding: 20px 0 20px;
@@ -93,12 +93,12 @@ body {}
     height: 50vh;
     z-index: -5;
 }
-
+/************************************************************************************/
 .timeline > li {
     margin-bottom: 20px;
     position: relative;
 }
-
+/************************************************************************************/
 .timeline > li:before,
 .timeline > li:after {
     content: " ";
@@ -108,7 +108,7 @@ body {}
 .timeline > li:after {
     clear: both;
 }
-
+/************************************************************************************/
 .timeline > li > .timeline-panel {
     width: 30%;
     max-height: 500px;
@@ -116,8 +116,9 @@ body {}
     padding: 20px;
     position: relative;
     text-align: justify;
+    color: lightblue;
 }
-
+/************************************************************************************/
 .timeline > li > .timeline-panel:before {
     position: absolute;
     top: 50px;
@@ -129,7 +130,7 @@ body {}
     border: 1px solid lightblue;
     content: " ";
 }
-
+/************************************************************************************/
 .timeline > li > .timeline-panel-img:before {
     position: absolute;
     top: 50px;
@@ -141,7 +142,7 @@ body {}
     background-color: lightblue;
     content: " ";
 }
-
+/************************************************************************************/
 .timeline > li > .timeline-panel:after {
     position: absolute;
     top: 59px;
@@ -152,7 +153,7 @@ body {}
     background-color: lightblue;
     content: " ";
 }
-
+/************************************************************************************/
 .timeline > li > .timeline-badge.active {
     color: #0E3B85;
     animation-name: lines;
@@ -161,7 +162,15 @@ body {}
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
-
+/************************************************************************************/
+.timeline > li > .timeline-panel.active {
+    animation-name: panel;
+    animation-duration: 1ss;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+/************************************************************************************/
 .timeline > li > .timeline-panel.active:after {
     animation-name: lines2;
     animation-duration: 1s;
@@ -170,7 +179,7 @@ body {}
     animation-iteration-count: 1;
 
 }
-
+/************************************************************************************/
 .timeline > li > .timeline-panel.active:before {
     animation-name: lines3;
     animation-duration: 1s;
@@ -178,7 +187,7 @@ body {}
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
-
+/************************************************************************************/
 .timeline > li > .timeline-panel-img.active:before {
     animation-name: ani-img;
     animation-duration: 1s;
@@ -186,7 +195,7 @@ body {}
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
-
+/************************************************************************************/
 @keyframes lines {
     0% {
         border: 1px solid lightblue;
@@ -201,7 +210,7 @@ body {}
         transform: scale(1, 1);
     }
 }
-
+/************************************************************************************/
 @keyframes lines2 {
     0% {
         height: 1px;
@@ -215,7 +224,7 @@ body {}
         background-color: #0E3B85;
     }
 }
-
+/************************************************************************************/
 @keyframes lines3 {
     0% {
         border: 1px solid lightblue;
@@ -230,7 +239,22 @@ body {}
         transform: scale(1, 1);
     }
 }
+/************************************************************************************/
+@keyframes panel {
+    0% {
+        color: lightblue;
 
+    }
+    50% {
+        color: #7390BF;
+
+    }
+    100% {
+        color: #0E3B85;
+
+    }
+}
+/************************************************************************************/
 @keyframes ani-img {
     0% {
         background-color: lightblue;
@@ -245,7 +269,7 @@ body {}
         transform: scale(1, 1);
     }
 }
-
+/************************************************************************************/
 .timeline > li > .timeline-badge {
     color: lightblue;
     width: 100px;
@@ -262,7 +286,7 @@ body {}
     border: 1px solid lightblue;
     z-index: 100;
 }
-
+/************************************************************************************/
 .timeline > li > .timeline-panel.timeline-inverted,
 .timeline > li.timeline-inverted > .timeline-panel {
     float: right;
@@ -282,7 +306,7 @@ body {}
     width: 220px;
 
 }
-
+/************************************************************************************/
 .endpart {
     height: 500px;
     background-color: white;
