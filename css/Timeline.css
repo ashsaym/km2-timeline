@@ -116,7 +116,7 @@ body {}
     padding: 50px;
     position: relative;
     text-align: justify;
-    color: lightblue;
+   color: #7390BF;
 }
 /************************************************************************************/
 .timeline > li > .timeline-panel:before {
@@ -170,15 +170,15 @@ body {}
     animation-iteration-count: 1;
 }
 /************************************************************************************/
-/****
+
 .timeline > li > .timeline-panel.active {
-    animation-name: panel;
-    animation-duration: 1ss;
+    animation-name: ani-panel;
+    animation-duration: 1s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
-***/
+
 /************************************************************************************/
 .timeline > li > .timeline-panel.active:after {
     animation-name: lines2;
@@ -207,8 +207,8 @@ body {}
 /************************************************************************************/
 .timeline-heading.active{
     animation-name: heading;
-    animation-duration: 2s;
-    animation-delay: 1.5s;
+    animation-duration: 1s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
@@ -275,6 +275,21 @@ body {}
     }
 }
 /************************************************************************************/
+@keyframes ani-panel {
+    0% {
+      color: #7390BF;;
+      transform: scale(1,1);
+    }
+    50% {
+      color: #7390BF;
+      transform: scale(1.2,1.2);
+    }
+    100% {
+      color: #7390BF;
+      transform: scale(1,1);
+    }
+}
+/************************************************************************************
 @keyframes heading {
     0% {
         color: lightblue;
@@ -282,22 +297,22 @@ body {}
     }
     25% {
         color: #7390BF;
-        transform: scale(0.98,0.98);
+        transform: scale(0.97,0.97);
     }
     50% {
         color: #7390BF;
-        transform: scale(1.05,1.05);
+        transform: scale(1.1,1.1);
     }
     75% {
         color: #7390BF;
-        transform: scale(0.98,0.98);
+        transform: scale(0.97,0.97);
     }
     100% {
         color: #0E3B85;
         transform: scale(1,1);
     }
 }
-/************************************************************************************/
+************************************************************************************/
 @keyframes ani-body {
     0% {
         color: lightblue;
