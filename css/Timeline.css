@@ -163,6 +163,7 @@ body {}
     animation-iteration-count: 1;
 }
 /************************************************************************************/
+/****
 .timeline > li > .timeline-panel.active {
     animation-name: panel;
     animation-duration: 1ss;
@@ -170,6 +171,7 @@ body {}
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
+***/
 /************************************************************************************/
 .timeline > li > .timeline-panel.active:after {
     animation-name: lines2;
@@ -192,6 +194,30 @@ body {}
     animation-name: ani-img;
     animation-duration: 1s;
     animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+/************************************************************************************/
+.timeline-heading.active{
+    animation-name: heading;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+/************************************************************************************/
+.timeline-title.active{
+    animation-name: heading;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+/************************************************************************************/
+.timeline-body.active{
+    animation-name: ani-body;
+    animation-duration: 1s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
@@ -240,9 +266,28 @@ body {}
     }
 }
 /************************************************************************************/
-@keyframes panel {
+@keyframes heading {
     0% {
         color: lightblue;
+        transform: scale(1,1);
+
+    }
+    50% {
+        color: #7390BF;
+        transform: scale(1.1,1.1);
+
+    }
+    100% {
+        color: #0E3B85;
+        transform: scale(1,1);
+
+    }
+}
+/************************************************************************************/
+@keyframes ani-body {
+    0% {
+        color: lightblue;
+
 
     }
     50% {
@@ -251,6 +296,7 @@ body {}
     }
     100% {
         color: #0E3B85;
+        
 
     }
 }
