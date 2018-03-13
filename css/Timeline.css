@@ -190,20 +190,19 @@ body {}
 }
 
 /************************************************************************************/
-.timeline-panel-text{
-opacity: 0;
 
+.timeline-panel-text {
+  opacity: 1;
 }
-
+/**
 .timeline-panel-text.active {
   animation-name: ani-panel;
   animation-duration: 2s;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-
 }
-
+**/
 /************************************************************************************/
 
 .timeline>li>.timeline-panel.active:after {
@@ -322,17 +321,14 @@ opacity: 0;
   0% {
     color: #7390BF;
     ;
-
     opacity: 0;
   }
   50% {
     color: #7390BF;
-
     opacity: 0.5;
   }
   100% {
     color: #7390BF;
-
     opacity: 1;
   }
 }
