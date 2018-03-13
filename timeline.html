@@ -8,6 +8,16 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="./js/calculateOffset.js"></script>
+  <script src="./js/detector.js"></script>
+  <script src="./js/elements.js"></script>
+  <script src="./js/handleScroll.js"></script>
+  <script src="./js/observer.js"></script>
+  <script src="./js/offset.js"></script>
+  <script src="./js/prepare.js"></script>
+  <script src="./js/timeline.js"></script>
+
 </head>
 
 <body>
@@ -240,10 +250,10 @@
     var nodes1 = Array.from(document.getElementsByClassName("timeline-badge"));
     var nodes2 = Array.from(document.getElementsByClassName("timeline-panel"));
     var nodes3 = Array.from(document.getElementsByClassName("timeline-panel-img"));
-    var nodes4 = Array.from(document.getElementsByClassName("timeline-panel-text"));
+    //var nodes4 = Array.from(document.getElementsByClassName("timeline-panel-text"));
     //var nodes5 = Array.from(document.getElementsByClassName("timeline-title"));
     //var nodes6 = Array.from(document.getElementsByClassName("timeline-body"));
-    const nodes = nodes1.concat(nodes2, nodes3, nodes4);
+    const nodes = nodes1.concat(nodes2, nodes3);
 
     const cache = {
       viewport: {},
@@ -321,6 +331,30 @@
         y: r.top + o.y
       };
     };
+
+    $(document).ready(function() {
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+
+        /* Check the location of each desired element */
+        $('.timeline-panel-text').each( function(i){
+
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).animate({'opacity':'1'},400);
+
+            }
+
+        });
+
+    });
+
+});
   </script>
 </body>
 
