@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="de">
+<!--<![endif]-->
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Vertical TimeLine Based on JavaScript and CSS">
+  <meta name="author" content="Saym Ash">
+  <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
   <title>TimeLine</title>
   <link rel="stylesheet" type="text/css" href="./css/Timeline.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
 </head>
 
 <body>
@@ -40,10 +48,10 @@
   <div class="horizontal-lines" id="line-right"></div>
 
   <!--TimeLine start-->
-  <ul class="timeline">
+  <ul class="timeline grid-container fluid">
 
-    <li>
-      <div class="timeline-badge">2018</div>
+    <li class="grid-x">
+      <div class="timeline-badge large-12 medium-12 small-12 cell">2018</div>
       <div class="timeline-panel">
         <div class="timeline-panel-text">
           <div class="timeline-heading">
@@ -228,6 +236,8 @@
 
     </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
   <script type="text/javascript" src="./js/timeline.js"></script>
   <script type="text/javascript" src="./js/fadeIn.js"></script>
 </body>
