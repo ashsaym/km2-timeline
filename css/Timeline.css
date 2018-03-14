@@ -6,7 +6,7 @@
 
 body {}
 
-/************************************************************************************/
+/****  UpperParts   ********************************************************************************/
 
 .UpperPart {
   height: 100%;
@@ -18,7 +18,7 @@ body {}
 }
 
 .UpperPart-Img {
-  padding: 50px;
+  padding: 20px;
 }
 
 .UpperPart-Img img {
@@ -52,150 +52,130 @@ body {}
   padding: 20px;
 }
 
+/** connection-line      **********************************************************************************/
+
 .connection-line {
-  height: 150px;
+  height: 25vh;
   width: 25%;
   background-color: white;
   margin-top: -50px;
-  margin-left: 49.9%;
+  margin-left: 50%;
   margin-right: 25%;
   border-right: 1.2px solid #0E3B85;
-  z-index: 3;
+  z-index: 5;
+  /*
+  display: none;
+  */
 }
 
-/************************************************************************************/
+/** horizontal-lines & Vertical Lines ************************************************************/
 
+.horizontal-lines {
+  width: 25%;
+  height: 1.2px;
+  position: absolute;
+  background-color: lightblue;
+  animation-name: animated-line;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+/*
+  display: none;
+  */
+  z-index: 5;
+}
+
+#line-right {
+  right: 25%;
+}
+
+/*
+#line-left {
+  left: 50%;
+}
+#line-center {
+  margin: auto;
+}
+*/
+
+@keyframes animated-line {
+  0% {
+    width: 0px;
+    background-color: lightblue;
+  }
+  100% {
+    width: 25%;
+    background-color: #0E3B85;
+  }
+}
+
+/**  TimeLine **********************************************************************************/
 .timeline {
   list-style: none;
-  padding: 20px 0 20px;
   position: relative;
-  z-index: -3;
+  z-index: -5;
+  margin-top: 15%; /* Top maring to before year to start*/
 }
 
+/** TimeLine before This is the Pathline in the middle **********************************************************************************/
 .timeline:before {
+  content: "";
   top: 0;
   bottom: 0;
   position: fixed;
-  content: " ";
-  width: 1px;
+  width: 1.5px;
   background-color: lightblue;
   left: 50%;
-  margin-left: -1.5px;
   height: 100vh;
   z-index: -5;
 }
-
+/** TimeLine after This is the Pathline in the middle with scroll effects ***************************************************/
 .timeline:after {
+  content: "";
   top: 0;
   bottom: 0;
   position: fixed;
-  content: " ";
   width: 1.5px;
   background-color: #0E3B85;
   left: 50%;
-  margin-left: -1.5px;
   height: 50vh;
   z-index: -5;
 }
-
-/************************************************************************************/
-
-.timeline>li {
-  margin-bottom: 20px;
+/** Timeline Before Year and Events  ************************************************/
+.timeline li {
   position: relative;
 }
-
-/************************************************************************************/
-
+/*** Timeline li before and after *************************************************************************/
 .timeline>li:before, .timeline>li:after {
   content: " ";
   display: table;
 }
-
+/** Only for events lines ************************************************/
 .timeline>li:after {
   clear: both;
 }
-
-/************************************************************************************/
-
+/** TimeLine Panel leftside  ************************************************/
 .timeline>li>.timeline-panel {
-  width: 30%;
-  height: 500px;
+  width: 40vw;
+  height: 40vh;
   float: left;
-  padding: 50px;
   position: relative;
-  text-align: justify;
+  /*
   color: #7390BF;
+  */
 }
-
-/************************************************************************************/
-
-.timeline>li>.timeline-panel:before {
-  position: absolute;
-  top: 50px;
-  right: -100px;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid lightblue;
-  content: " ";
-  background-color: white;
-  z-index: 99;
+/** TimeLine Panel Right side************************************************/
+.timeline>li>.timeline-panel.timeline-panel-inverted, .timeline>li.timeline-panel-inverted>.timeline-panel {
+  float: right;
 }
-
-/************************************************************************************/
-
-.timeline-panel-img img {
-  width: 400px;
-  height: 400px;
-}
-
-/************************************************************************************/
-
-.timeline>li>.timeline-panel-img:before {
-  position: absolute;
-  top: 50px;
-  right: -100px;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: lightblue;
-  content: " ";
-}
-
-/************************************************************************************/
-
-.timeline>li>.timeline-panel:after {
-  position: absolute;
-  top: 59px;
-  right: -290px;
-  display: inline-block;
-  width: 190px;
-  height: 1px;
-  background-color: lightblue;
-  content: " ";
-}
-
-/************************************************************************************/
-
-.timeline>li>.timeline-badge.active {
-  color: #0E3B85;
-  animation-name: lines;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-/************************************************************************************/
-
-.timeline-panel-text {
+/** TimeLine Events ************************************************/
+.timeline-panel-events {
   opacity: 1;
 }
+/**  TimeLine Events Active ************************************************/
 /**
-.timeline-panel-text.active {
+.timeline-panel-events.active {
   animation-name: ani-panel;
   animation-duration: 2s;
   animation-delay: 1.5s;
@@ -203,71 +183,34 @@ body {}
   animation-iteration-count: 1;
 }
 **/
-/************************************************************************************/
-
-.timeline>li>.timeline-panel.active:after {
-  animation-name: lines2;
+/** TimeLine Year  ************************************************/
+.timeline>li>.timeline-year {
+  color: lightblue;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  line-height: 100px;
+  font-size: 2em;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -60px;
+  background-color: white;
+  border: 1px solid lightblue;
+  z-index: 5;
+}
+/**  ************************************************/
+.timeline>li>.timeline-year.active {
+  color: #0E3B85;
+  animation-name: year-popup;
   animation-duration: 1s;
-  animation-delay: 0.5s;
+  animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 
-/************************************************************************************/
-
-.timeline>li>.timeline-panel.active:before {
-  animation-name: lines3;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-/************************************************************************************/
-
-.timeline>li>.timeline-panel-img.active:before {
-  animation-name: ani-img;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-/************************************************************************************/
-/**
-.timeline-heading.active {
-  animation-name: heading;
-  animation-duration: 1s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-**/
-/************************************************************************************/
-/**
-.timeline-title.active {
-  animation-name: heading;
-  animation-duration: 2s;
-  animation-delay: 1.5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-*/
-/************************************************************************************/
-/*
-.timeline-body.active {
-  animation-name: ani-body;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-*/
-/************************************************************************************/
-
-/************************************************************************************/
-
-@keyframes lines {
+@keyframes year-popup {
   0% {
     border: 1px solid lightblue;
     transform: scale(1, 1);
@@ -281,191 +224,370 @@ body {}
     transform: scale(1, 1);
   }
 }
-
-/************************************************************************************/
-
-@keyframes lines2 {
-  0% {
-    height: 1px;
-  }
-  50% {
-    height: 1.25px;
-    background-color: #7390BF;
-  }
-  100% {
-    height: 1.5px;
-    background-color: #0E3B85;
-  }
-}
-
-/************************************************************************************/
-
-@keyframes lines3 {
-  0% {
-    border: 1px solid lightblue;
-    transform: scale(1, 1);
-  }
-  50% {
-    border: 1.25px solid #7390BF;
-    transform: scale(2, 2);
-  }
-  100% {
-    border: 1.5px solid #0E3B85;
-    transform: scale(1, 1);
-  }
-}
-
-/************************************************************************************/
-
-@keyframes ani-panel {
-  0% {
-    color: #7390BF;
-    ;
-    opacity: 0;
-  }
-  50% {
-    color: #7390BF;
-    opacity: 0.5;
-  }
-  100% {
-    color: #7390BF;
-    opacity: 1;
-  }
-}
-
-/************************************************************************************
-@keyframes heading {
-    0% {
-        color: lightblue;
-        transform: scale(1,1);
-    }
-    25% {
-        color: #7390BF;
-        transform: scale(0.97,0.97);
-    }
-    50% {
-        color: #7390BF;
-        transform: scale(1.1,1.1);
-    }
-    75% {
-        color: #7390BF;
-        transform: scale(0.97,0.97);
-    }
-    100% {
-        color: #0E3B85;
-        transform: scale(1,1);
-    }
-}
-************************************************************************************/
-
-@keyframes ani-body {
-  0% {
-    color: lightblue;
-  }
-  50% {
-    color: #7390BF;
-  }
-  100% {
-    color: #0E3B85;
-  }
-}
-
-/************************************************************************************/
-
-@keyframes ani-img {
-  0% {
-    background-color: lightblue;
-    transform: scale(1, 1);
-  }
-  50% {
-    background-color: #7390BF;
-    transform: scale(2, 2);
-  }
-  100% {
-    background-color: #0E3B85;
-    transform: scale(1, 1);
-  }
-}
-
-/************************************************************************************/
-
-.timeline>li>.timeline-badge {
-  color: lightblue;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  line-height: 100px;
-  font-size: 2em;
-  text-align: center;
+/** line before each events ************************************************/
+.timeline>li>.timeline-panel:after {
   position: absolute;
-  top: 16px;
-  left: 50%;
-  margin-left: -60px;
-  background-color: white;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 10%;
+  height: 1px;
+  background-color: lightblue;
+  content: " ";
+}
+/** Circle before each events ************************************************/
+.timeline>li>.timeline-panel:before {
+  position: absolute;
+  top: 50px;
+  right: -2%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   border: 1px solid lightblue;
-  z-index: 100;
+  content: " ";
+  background-color: white;
+  z-index: 99;
+}
+/** Circle before each events with full background ************************************************/
+.timeline>li>.timeline-circle:before {
+  position: absolute;
+  top: 50px;
+  right: -2%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: lightblue;
+  content: " ";
+}
+/**  ************************************************/
+.timeline>li>.timeline-panel.timeline-panel-inverted:before, .timeline>li.timeline-panel-inverted>.timeline-panel:before {
+  left: -4%;
+  top: 2%
+
 }
 
-/************************************************************************************/
-
-.timeline>li>.timeline-panel.timeline-inverted, .timeline>li.timeline-inverted>.timeline-panel {
-  float: right;
-}
-
-.timeline>li>.timeline-panel.timeline-inverted:before, .timeline>li.timeline-inverted>.timeline-panel:before {
-  left: -90px;
-  right: auto;
-}
-
-.timeline>li>.timeline-panel.timeline-inverted:after, .timeline>li.timeline-inverted>.timeline-panel:after {
+.timeline>li>.timeline-panel.timeline-panel-inverted:after, .timeline>li.timeline-panel-inverted>.timeline-panel:after {
   background-color: lightblue;
   left: -310px;
   right: auto;
   width: 220px;
 }
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
+/**  ************************************************/
 
-/************************************************************************************/
 
-.endpart {
-  height: 500px;
-  background-color: white;
-  z-index: 3;
-  margin-top: 100px;
-}
 
-/************************************************************************************/
 
-.horizontal-lines {
-  display: block;
-  width: 0px;
-  height: 1.2px;
-  position: absolute;
-  background-color: #0E3B85;
-  animation-name: animated-line;
-  animation-duration: 3s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
 
-#line-left {
-  left: 50%;
-}
 
-#line-right {
-  right: 25%;
-}
 
-#line-center {
-  margin: auto;
-}
 
-@keyframes animated-line {
-  0% {
-    width: 0px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************ Media Query For responsive *******************************************/
+/*
+  ##Device = Desktops 4k or higher
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1981px) {
+  .connection-line {
+    display: block;
   }
-  100% {
-    width: 25%;
+  .horizontal-lines {
+    display: block;
+  }
+  .timeline:before {
+    left: 50%;
+  }
+  .timeline:after {
+    left: 50%;
+  }
+}
+/************************************************************************************/
+/*
+  ##Device = Desktops Hd or full Hd
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) and (max-width: 1980px) {
+  .connection-line {
+    display: block;
+  }
+  .horizontal-lines {
+    display: block;
+  }
+
+  .timeline:before {
+    left: 50%;
+  }
+  .timeline:after {
+    left: 50%;
+  }
+}
+
+/************************************************************************************/
+
+/*
+  ##Device = Laptops, Desktops Old Monitor or IpadPro
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .connection-line {
+    display: block;
+  }
+  .horizontal-lines {
+    display: block;
+  }
+
+  .timeline:before {
+    left: 50%;
+  }
+  .timeline:after {
+    left: 50%;
+  }
+  .timeline>li>.timeline-year {
+    left: 50%;
+  }
+}
+
+/************************************************************************************/
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .connection-line {
+      margin-left:1%;
+      width: 49%;
+  }
+  #line-right {
+    right: 50%;
+  }
+  @keyframes animated-line {
+    0% {
+      width: 0px;
+      background-color: lightblue;
+    }
+    100% {
+      width: 40%;
+      background-color: #0E3B85;
+    }
+  }
+
+
+  .timeline>li>.timeline-panel {
+    float: none;
+    position: relative;
+  }
+  .timeline>li>.timeline-panel.timeline-panel-inverted, .timeline>li.timeline-panel-inverted>.timeline-panel {
+    float: none;
+  }
+
+  .timeline:before {
+    left: 10%;
+  }
+  .timeline:after {
+    left: 10%;
+  }
+  .timeline>li>.timeline-year {
+    left: 11%;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    line-height: 75px;
+    font-size: 1.5em;
+  }
+}
+
+/************************************************************************************/
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .connection-line {
+      margin-left:1%;
+      width: 49%;
+  }
+  #line-right {
+    right: 50%;
+  }
+
+  @keyframes animated-line {
+    0% {
+      width: 0px;
+      background-color: lightblue;
+    }
+    100% {
+      width: 40%;
+      background-color: #0E3B85;
+    }
+  }
+
+  .timeline>li>.timeline-panel {
+    float: none;
+    position: relative;
+  }
+  .timeline>li>.timeline-panel.timeline-panel-inverted, .timeline>li.timeline-panel-inverted>.timeline-panel {
+    float: none;
+  }
+
+
+  .timeline:before {
+    left: 10%;
+  }
+  .timeline:after {
+    left: 10%;
+  }
+  .timeline>li>.timeline-year {
+    left: 11%;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    line-height: 75px;
+    font-size: 1.5em;
+  }
+}
+
+/************************************************************************************/
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .connection-line {
+      margin-left:1%;
+      width: 49%;
+  }
+  #line-right {
+    right: 50%;
+  }
+  @keyframes animated-line {
+    0% {
+      width: 0px;
+      background-color: lightblue;
+    }
+    100% {
+      width: 40%;
+      background-color: #0E3B85;
+    }
+  }
+
+  .timeline>li>.timeline-panel {
+    float: none;
+    position: relative;
+  }
+  .timeline>li>.timeline-panel.timeline-panel-inverted, .timeline>li.timeline-panel-inverted>.timeline-panel {
+    float: none;
+  }
+
+
+  .timeline:before {
+    left: 10%;
+  }
+  .timeline:after {
+    left: 10%;
+  }
+  .timeline>li>.timeline-year {
+    left: 11%;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    line-height: 75px;
+    font-size: 1.5em;
+  }
+}
+
+/************************************************************************************/
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .connection-line {
+      margin-left:1%;
+      width: 49%;
+  }
+  #line-right {
+    right: 50%;
+  }
+  @keyframes animated-line {
+    0% {
+      width: 0px;
+      background-color: lightblue;
+    }
+    100% {
+      width: 40%;
+      background-color: #0E3B85;
+    }
+  }
+
+  .timeline>li>.timeline-panel {
+    float: none;
+    position: relative;
+  }
+  .timeline>li>.timeline-panel.timeline-panel-inverted, .timeline>li.timeline-panel-inverted>.timeline-panel {
+    float: none;
+  }
+
+
+  .timeline:before {
+    left: 10%;
+  }
+  .timeline:after {
+    left: 10%;
+  }
+  .timeline>li>.timeline-year {
+    left: 11%;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    line-height: 75px;
+    font-size: 1.5em;
   }
 }
 

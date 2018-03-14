@@ -1,7 +1,7 @@
 $(window).on("load", function() {
   $(window).scroll(function() {
     var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-    $(".timeline-panel-text").each(function() {
+    $(".timeline-panel-events").each(function() {
       var objectBottom = $(this).offset().top -100 + $(this).outerHeight();
       if (objectBottom < windowBottom) {
         if ($(this).css("opacity") == 0) {

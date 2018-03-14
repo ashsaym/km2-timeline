@@ -1,7 +1,7 @@
-var nodes1 = Array.from(document.getElementsByClassName("timeline-badge"));
+var nodes1 = Array.from(document.getElementsByClassName("timeline-year"));
 var nodes2 = Array.from(document.getElementsByClassName("timeline-panel"));
-var nodes3 = Array.from(document.getElementsByClassName("timeline-panel-img"));
-//var nodes4 = Array.from(document.getElementsByClassName("timeline-panel-text"));
+var nodes3 = Array.from(document.getElementsByClassName("timeline-circle"));
+//var nodes4 = Array.from(document.getElementsByClassName("timeline-panel-events"));
 //var nodes5 = Array.from(document.getElementsByClassName("timeline-title"));
 //var nodes6 = Array.from(document.getElementsByClassName("timeline-body"));
 const nodes = nodes1.concat(nodes2, nodes3);
@@ -11,7 +11,7 @@ const cache = {
   rects: []
 };
 console.log("test-saym");
-console.log(document.getElementsByClassName("timeline-badge"))
+console.log(document.getElementsByClassName("timeline-year"))
 window.addEventListener("load", init);
 
 function init() {
