@@ -234,7 +234,7 @@ body {}
 }
 
 /************************************************************************************/
-
+/**
 .timeline-heading.active {
   animation-name: heading;
   animation-duration: 1s;
@@ -242,9 +242,9 @@ body {}
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
-
+**/
 /************************************************************************************/
-
+/**
 .timeline-title.active {
   animation-name: heading;
   animation-duration: 2s;
@@ -252,9 +252,9 @@ body {}
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
-
+*/
 /************************************************************************************/
-
+/*
 .timeline-body.active {
   animation-name: ani-body;
   animation-duration: 1s;
@@ -262,7 +262,7 @@ body {}
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
-
+*/
 /************************************************************************************/
 
 /************************************************************************************/

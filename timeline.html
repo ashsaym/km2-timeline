@@ -12,7 +12,7 @@
 
 <body>
   <!--UpperParts Starts-->
-  <!------------------------------------------------------------------------------------------------------------------->
+
   <div class="UpperPart grid-container fluid">
     <div class="grid-x">
       <div class="UpperPart-text large-6 medium-12 small-12 cell">
@@ -33,15 +33,15 @@
       </div>
     </div>
   </div>
-  <!------------------------------------------------------------------------------------------------------------------->
+
   <!--Connecting Lines-->
   <div class="large-12 medium-12 small-12 connection-line">
   </div>
   <div class="horizontal-lines" id="line-right"></div>
-  <!------------------------------------------------------------------------------------------------------------------->
+
   <!--TimeLine start-->
   <ul class="timeline">
-    <!------------------------------------------------------------------------------------------------------------------->
+
     <li>
       <div class="timeline-badge">2018</div>
       <div class="timeline-panel">
@@ -61,7 +61,7 @@
         </div>
       </div>
     </li>
-    <!------------------------------------------------------------------------------------------------------------------->
+
     <li>
       <div class="timeline-badge">2017</div>
       <div class="timeline-panel">
@@ -87,7 +87,7 @@
         </div>
       </div>
     </li>
-    <!------------------------------------------------------------------------------------------------------------------->
+
     <li>
       <div class="timeline-panel timeline-panel-img">
         <div class="timeline-panel-text">
@@ -101,7 +101,7 @@
         </div>
       </div>
     </li>
-    <!------------------------------------------------------------------------------------------------------------------->
+
     <li>
       <div class="timeline-badge">2016</div>
       <div class="timeline-panel">
@@ -127,7 +127,6 @@
         </div>
       </div>
     </li>
-    <!------------------------------------------------------------------------------------------------------------------->
     <li>
       <div class="timeline-panel timeline-inverted timeline-panel-img">
         <div class="timeline-panel-text">
@@ -141,7 +140,6 @@
         </div>
       </div>
     </li>
-    <!------------------------------------------------------------------------------------------------------------------->
     <li>
       <div class="timeline-badge">2015</div>
       <div class="timeline-panel">
@@ -167,7 +165,6 @@
         </div>
       </div>
     </li>
-    <!------------------------------------------------------------------------------------------------------------------->
     <li>
       <div class="timeline-badge">2014</div>
       <div class="timeline-panel">
@@ -187,7 +184,6 @@
         </div>
       </div>
     </li>
-    <!------------------------------------------------------------------------------------------------------------------->
     <li>
       <div class="timeline-badge">2013</div>
       <div class="timeline-panel timeline-panel-img">
@@ -196,7 +192,6 @@
         </div>
       </div>
     </li>
-    <!------------------------------------------------------------------------------------------------------------------->
     <li>
       <div class="timeline-badge">2016</div>
       <div class="timeline-panel">
@@ -222,126 +217,19 @@
         </div>
       </div>
     </li>
-    <!------------------------------------------------------------------------------------------------------------------->
     <li>
       <div class="timeline-badge">End</div>
     </li>
   </ul>
   </div>
-  <!------------------------------------------------------------------------------------------------------------------->
   <!---EndParts Starts-->
   <div class="grid-container fluid">
     <div class="endpart">
 
     </div>
   </div>
-  <!------------------------------------------------------------------------------------------------------------------->
-  <script type="text/javascript">
-  //********************************************************************************//
-    var nodes1 = Array.from(document.getElementsByClassName("timeline-badge"));
-    var nodes2 = Array.from(document.getElementsByClassName("timeline-panel"));
-    var nodes3 = Array.from(document.getElementsByClassName("timeline-panel-img"));
-    //var nodes4 = Array.from(document.getElementsByClassName("timeline-panel-text"));
-    //var nodes5 = Array.from(document.getElementsByClassName("timeline-title"));
-    //var nodes6 = Array.from(document.getElementsByClassName("timeline-body"));
-    const nodes = nodes1.concat(nodes2, nodes3);
-
-    const cache = {
-      viewport: {},
-      rects: []
-    };
-    console.log("test-saym");
-    console.log(document.getElementsByClassName("timeline-badge"))
-    window.addEventListener("load", init);
-
-    function init() {
-      recache();
-      document.addEventListener("scroll", throttle(scrollCheck, 10));
-      window.addEventListener("resize", debounce(recache, 50));
-    };
-
-    function recache() {
-      cache.viewport = {
-        width: window.innerWidth,
-        height: window.innerHeight
-      };
-      nodes.forEach((node, i) => {
-        cache.rects[i] = rect(node);
-      });
-      scrollCheck();
-    }
-
-    function scrollCheck() {
-      const offset = getScrollOffset();
-      const midline = cache.viewport.height * 0.5;
-      cache.rects.forEach((rect, i) => {
-        nodes[i].classList.toggle("active", rect.y - offset.y < midline);
-      });
-    };
-
-    function getScrollOffset() {
-      return {
-        x: window.pageXOffset,
-        y: window.pageYOffset
-      };
-    };
-
-    function throttle(fn, limit, context) {
-      let wait;
-      return function() {
-        context = context || this;
-        if (!wait) {
-          fn.apply(context, arguments);
-          wait = true;
-          return setTimeout(function() {
-            wait = false;
-          }, limit);
-        }
-      };
-    };
-
-    function debounce(fn, limit, u) {
-      let e;
-      return function() {
-        const i = this;
-        const o = arguments;
-        const a = u && !e;
-        clearTimeout(e),
-          (e = setTimeout(function() {
-            (e = null), u || fn.apply(i, o);
-          }, limit)),
-          a && fn.apply(i, o);
-      };
-    }
-
-    function rect(e) {
-      const o = getScrollOffset();
-      const r = e.getBoundingClientRect();
-      return {
-        x: r.left + o.x,
-        y: r.top + o.y
-      };
-    };
-    //********************************************************************************//
-    $(window).on("load", function() {
-      $(window).scroll(function() {
-        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-        $(".timeline-panel-text").each(function() {
-          var objectBottom = $(this).offset().top + $(this).outerHeight();
-          if (objectBottom < windowBottom) {
-            if ($(this).css("opacity") == 0) {
-              $(this).fadeTo(500, 1);
-            }
-          } else {
-            if ($(this).css("opacity") == 1) {
-              $(this).fadeTo(500, 0);
-            }
-          }
-        });
-      }).scroll();
-    });
-    //********************************************************************************//
-  </script>
+  <script type="text/javascript" src="./js/timeline.js"></script>
+  <script type="text/javascript" src="./js/fadeIn.js"></script>
 </body>
 
 </html>
