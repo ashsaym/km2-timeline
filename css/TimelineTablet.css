@@ -3,7 +3,7 @@
   display: none;
   }
 .timeline{
-  padding-top: 0;
+  padding-top: 50px;
   margin-left: 0;
 }
   .timeline:before {
@@ -18,18 +18,17 @@
     padding-bottom: 10%;
   }
   .timeline>li>.timeline-badge {
-    width: 75px;
-    height: 75px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
-    line-height: 75px;
-    font-size: 1.5em;
+    line-height: 125px;
+    font-size: 2em;
     left: 50%;
     top: 0;
+    margin-bottom: 50px;
     position: relative;
   }
-  .timeline>li>.timeline-badge.active {
-    animation-name: none;
-  }
+
   .timeline>li>.timeline-panel {
     width: 100vw;
     height: 35vh;
@@ -40,7 +39,7 @@
     display: block;
     padding: 5%;
     height: auto;
-    text-align:center;
+    text-align:justify;
   }
 
   .timeline>li>.timeline-panel.timeline-inverted, .timeline>li.timeline-inverted>.timeline-panel {
@@ -57,5 +56,17 @@
   }
   .timeline>li>.timeline-panel-img::after{
     display: none;
+  }
+  .timeline-body p{
+    font-size: 90%;
+  }
+  .timeline-title{
+    text-align: center;
+    font-size: 150%;
+  }
+  .timeline-panel-text img{
+    height: 40vh;
+    background-size: cover;
+    text-align: center;
   }
 }
