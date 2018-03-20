@@ -1,11 +1,11 @@
 @media (max-width: 1024px) {
   .connection-line {
-  display: none;
+    display: none;
   }
-.timeline{
-  padding-top: 50px;
-  margin-left: 0;
-}
+  .timeline {
+    padding-top: 50px;
+    margin-left: 0;
+  }
   .timeline:before {
     left: 50%;
     display: none;
@@ -14,7 +14,7 @@
     left: 50%;
     display: none;
   }
-  .timeline>li{
+  .timeline>li {
     padding-bottom: 10%;
   }
   .timeline>li>.timeline-badge {
@@ -28,45 +28,45 @@
     margin-bottom: 50px;
     position: relative;
   }
-
   .timeline>li>.timeline-panel {
     width: 100vw;
     height: 35vh;
-    float:none;
+    float: none;
     left: 0%;
     background-color: white;
     z-index: 5;
     display: block;
     padding: 5%;
     height: auto;
-    text-align:justify;
+    text-align: justify;
   }
-
   .timeline>li>.timeline-panel.timeline-inverted, .timeline>li.timeline-inverted>.timeline-panel {
     float: none;
   }
   .timeline>li>.timeline-panel::before {
     display: none;
   }
-  .timeline>li>.timeline-panel::after{
+  .timeline>li>.timeline-panel::after {
     display: none;
   }
   .timeline>li>.timeline-panel-img::before {
     display: none;
   }
-  .timeline>li>.timeline-panel-img::after{
+  .timeline>li>.timeline-panel-img::after {
     display: none;
   }
-  .timeline-body p{
+  .timeline-body p {
     font-size: 90%;
   }
-  .timeline-title{
+  .timeline-title {
     text-align: center;
     font-size: 150%;
   }
-  .timeline-panel-text img{
+  .timeline-panel-text img {
     height: 40vh;
     background-size: cover;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }
