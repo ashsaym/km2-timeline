@@ -30,6 +30,29 @@ and (-webkit-min-device-pixel-ratio:1)
     margin-bottom: 50px;
     position: relative;
   }
+  .timeline-badge.active {
+    color: #0E3B85;
+    animation-name: lines-mob;
+    -webkit-animation-name: lines-mob;
+    -ms-animation-name: lines-mob;
+    -moz-animation-name: lines-mob;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+  }
   .timeline>li>.timeline-panel {
     width: 100vw;
     height: 35vh;
@@ -63,7 +86,7 @@ and (-webkit-min-device-pixel-ratio:1)
   }
   .timeline-title {
     text-align: center;
-    font-size: 125%;
+    font-size: 1.5em;
   }
   .timeline-panel-body img {
     height: 40vh;
@@ -72,4 +95,29 @@ and (-webkit-min-device-pixel-ratio:1)
     margin-right: auto;
     display: block;
   }
+
+  @keyframes lines-mob {
+    0% {
+      border: 1px solid lightblue;
+      transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -webkit-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+    }
+    50% {
+      border: 1.25px solid #7390BF;
+      transform: scale(1.2, 1.2);
+      -ms-transform: scale(1.2, 1.2);
+      -webkit-transform: scale(1.2, 1.2);
+      -moz-transform: scale(1.2, 1.2);
+    }
+    100% {
+      border: 1.5px solid #0E3B85;
+      transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -webkit-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+    }
+  }
+
 }

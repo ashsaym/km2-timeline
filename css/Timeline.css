@@ -80,8 +80,14 @@
 /************************************************************************************/
 
 .timeline-panel-img img {
-  width: 400px;
-  height: 400px;
+  min-width: 300px;
+  min-height: 300px;
+  width: 100%;
+  height: auto;
+  max-width: 40vw;
+  max-height: auto;
+  left: auto;
+  right: auto;
 }
 
 /************************************************************************************/
@@ -262,8 +268,14 @@
   right: auto;
   width: 10vw;
 }
+.timeline-title{
+  font-size: 2em;
+  line-height: 1.5;
+  text-align: center;
+}
 
 /************************************************************************************/
+
 
 .endpart {
   height: 50vh;
