@@ -88,13 +88,15 @@ and (-webkit-min-device-pixel-ratio:1)
     text-align: center;
     font-size: 1.5em;
   }
-  .timeline-panel-body img {
-    height: 40vh;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  .timeline-panel-img img {
+    width: 100%;
+    height: auto;
+    max-width: 90vw;
+
+    left: auto;
+    right: auto;
   }
+
 
   @keyframes lines-mob {
     0% {
