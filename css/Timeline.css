@@ -1,3 +1,59 @@
+/******* this is the upper horizontal and vertical lines *************************************************/
+.connection-line {
+  height: 30vh;
+  width: 50%;
+  background-color: white;
+  margin-top: -10vh;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-right: 1.2px solid #0E3B85;
+  z-index: 3;
+}
+.horizontal-lines {
+  display: block;
+  width: 0px;
+  height: 1.2px;
+  margin-top: 30vh;
+  position: absolute;
+  background-color: #0E3B85;
+  animation-name: animated-line;
+  -webkit-animation-name: animated-line;
+  -ms-animation-name: animated-line;
+  -moz-animation-name: animated-line;
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+}
+
+#line-left {
+  left: 50%;
+}
+
+#line-right {
+  right: 25%;
+}
+
+#line-center {
+  margin: auto;
+}
+
+/************************************************************************************/
+
+/********************************************************/
+
 .timeline {
   list-style: none;
   padding-top: 30vh;
@@ -282,49 +338,6 @@
   background-color: white;
   z-index: 3;
   margin-top: 100px;
-}
-
-/************************************************************************************/
-
-.horizontal-lines {
-  display: block;
-  width: 0px;
-  height: 1.2px;
-  margin-top: 30vh;
-  position: absolute;
-  background-color: #0E3B85;
-  animation-name: animated-line;
-  -webkit-animation-name: animated-line;
-  -ms-animation-name: animated-line;
-  -moz-animation-name: animated-line;
-  animation-duration: 3s;
-  -webkit-animation-duration: 3s;
-  -ms-animation-duration: 3s;
-  -moz-animation-duration: 3s;
-  animation-delay: 1s;
-  -ms-animation-delay: 1s;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  -webkit-animation-iteration-count: 1;
-  -ms-animation-iteration-count: 1;
-  -moz-animation-iteration-count: 1;
-}
-
-#line-left {
-  left: 50%;
-}
-
-#line-right {
-  right: 25%;
-}
-
-#line-center {
-  margin: auto;
 }
 
 /************************************************************************************/
