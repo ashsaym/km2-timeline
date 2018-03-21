@@ -1,0 +1,55 @@
+
+.UpperPart {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  background-color: white;
+}
+
+.UpperPart-Img {
+  padding: 50px;
+}
+
+.UpperPart-Img img {
+  height: 100%;
+  width: 100%;
+}
+
+.UpperPart-text {
+  height: auto;
+  padding: 50px 50px 50px 0px;
+  text-align: left;
+  line-height: 2;
+}
+
+.UpperPart-Title {
+  color: #292929;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.UpperPart-SubTitle {
+  color: #2F2F2F;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.UpperPart-Description {
+  font-size: 20px;
+  color: #7D7D7D;
+  padding: 20px;
+}
+
+.connection-line {
+  height: 30vh;
+  width: 50%;
+  background-color: white;
+  margin-top: -10vh;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-right: 1.2px solid #0E3B85;
+  z-index: 3;
+}

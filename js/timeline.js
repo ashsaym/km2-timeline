@@ -1,17 +1,12 @@
 var nodes1 = Array.from(document.getElementsByClassName("timeline-badge"));
 var nodes2 = Array.from(document.getElementsByClassName("timeline-panel"));
 var nodes3 = Array.from(document.getElementsByClassName("timeline-panel-img"));
-//var nodes4 = Array.from(document.getElementsByClassName("timeline-panel-text"));
-//var nodes5 = Array.from(document.getElementsByClassName("timeline-title"));
-//var nodes6 = Array.from(document.getElementsByClassName("timeline-body"));
 const nodes = nodes1.concat(nodes2, nodes3);
 
 const cache = {
   viewport: {},
   rects: []
 };
-console.log("test-saym");
-console.log(document.getElementsByClassName("timeline-badge"))
 window.addEventListener("load", init);
 
 function init() {

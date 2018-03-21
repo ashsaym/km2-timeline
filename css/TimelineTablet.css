@@ -1,4 +1,6 @@
-@media (max-width: 1024px) {
+@media (max-width: 1023px)
+and (-webkit-min-device-pixel-ratio:1)
+  {
   .connection-line {
     display: none;
   }
@@ -57,12 +59,13 @@
   }
   .timeline-body p {
     font-size: 90%;
+    line-height: 1.25;
   }
   .timeline-title {
     text-align: center;
-    font-size: 150%;
+    font-size: 125%;
   }
-  .timeline-panel-text img {
+  .timeline-panel-body img {
     height: 40vh;
     background-size: cover;
     margin-left: auto;
