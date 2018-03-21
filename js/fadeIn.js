@@ -15,3 +15,4 @@ $(window).on("load", function() {
     });
   }).scroll();
 });
+//by Saym Ash//

@@ -77,3 +77,5 @@ function rect(e) {
     y: r.top + o.y
   };
 };
+
+//by Saym Ash//
